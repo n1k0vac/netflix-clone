@@ -50,12 +50,13 @@ export const NavBar = ({
   return (
     <nav
       className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-300 px-4 sm:px-8 md:px-12 py-3 sm:py-5 flex items-center justify-between",
+        "fixed top-0 left-0 w-full z-50 transition-all duration-300",
         scrolled
           ? "bg-black/40 backdrop-blur-xl border-b border-white/5 shadow-2xl"
           : "bg-gradient-to-b from-black/80 via-black/20 to-transparent",
       )}
     >
+      <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-8 md:px-12 py-3 sm:py-5 flex items-center justify-between">
       <div className="flex items-center gap-8 md:gap-12">
         <h1
           onClick={() => setTab("home")}
@@ -200,6 +201,7 @@ export const NavBar = ({
         >
           <Search className="w-5 h-5" strokeWidth={2.5} />
         </button>
+      </div>
       </div>
     </nav>
   );
